@@ -51,8 +51,8 @@ Clone the repository and open the sample files in your browser.
 
 ## Credits
 This project would have not been possible without the following top-level projects:  
-* [https://github.com/kennethkufluk/js-mindmap] for mindmap rendering
-* [https://github.com/arturadib/strapdown] for markup rendering
+* [js-mindmap](https://github.com/kennethkufluk/js-mindmap) for mindmap rendering
+* [strapdown.js](https://github.com/arturadib/strapdown) for markup rendering
 
 ### Contributing
 Do the usual GitHub fork and pull request dance for contributing.
@@ -61,5 +61,4 @@ If you contribute code to this project, you are implicitly allowing your code
 to be distributed under the MIT license. 
 
 ## License
-Released under the MIT License.
-See LICENSE for more info.
+Released under the MIT License. See LICENSE for more info.
