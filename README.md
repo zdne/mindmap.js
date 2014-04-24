@@ -45,6 +45,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 * bullet 3
     </xmp>
 </html>
+```
 
 Clone the repository and open the sample files in your browser. 
 
