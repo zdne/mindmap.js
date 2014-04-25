@@ -7,6 +7,8 @@ This project was borne out of my frustration wanting to summarize papers and boo
 
 ## Usage
 
+Checkout the [project page](http://hlgr360.github.io/mindmap.js/) for a live example.
+
 ### Browser
 
 Here is a complete example or strapdown.js style markup document rendered as Mindmap:
