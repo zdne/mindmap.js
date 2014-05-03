@@ -537,7 +537,5 @@
   };
 }(jQuery));
 
-// notify that we are loaded
-mindmapjs.componentAvailable('js_mindmap');
 
 /*jslint devel: true, browser: true, continue: true, plusplus: true, indent: 2 */

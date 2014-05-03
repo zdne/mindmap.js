@@ -116,6 +116,4 @@ var mindmap_md = {
   }
 }
 
-// notify that we are loaded
-mindmapjs.componentAvailable('mindmap_md');
 
