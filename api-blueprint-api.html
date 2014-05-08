@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <title>mindmap.js</title>
+
+  <!-- jQuery -->
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/jquery-ui.min.js" type="text/javascript" ></script>
+
+  <!-- mindmap.js -->
+  <link href="css/mindmap.css" rel="stylesheet" type="text/css"/>
+  <script src="js/mindmap.min.js" type="text/javascript"></script>
+
+  <xmp theme="slate" style="display:none;">
+# GTD TODO API
+This is an example API, originally written as a companion to a [Quickly Prototype APIs with Apiary](http://sendgrid.com/blog/quickly-prototype-apis-apiary/) blog post at SendGrid.com. Extended by [@zdne](https://github.com/zdne) put emphasis on hyperlinks.
+
+## GTD TODO API [/]
+The API entry point. Root of the API. Main node of the mind map.
+This entry point resource does not have any attributes, instead it offers root API affordances.
+
+### Affordances
++ `show` (`self`) ... API entry point
++ `folders` ... Lists all folders 
+
+### Retrieve the API Root [GET]
+
++ Response 200 (application/hal+json)
+
+        {
+            "_links": {
+               "self": { "href": "/" },
+               "folders": { "href": "/folders"}
+            }
+        }
+
+## Folder [/folders/{id}]
+A single Folder object.
+
+### Attributes
++ `id` ... Id of a folder. Automatically assigned
++ `name` ... Name of the folder
++ `description` ... Description of the folder
++ `parent` ... ID of folder that is the parent. Set to 0 if no parent
++ `meta` ... A catch-all attribute to add custom features
+
+### Affordances
++ `show` (`self`) ... A single Folder
++ `edit` ... Update or delete the Folder
+
++ Parameters
+    + id (required, int, `0`) ... Unique folder ID in the form of an integer
+
++ Model (application/hal+json)
+    
+        {
+            "_links": {
+               "self": { "href": "/folders/1" },
+               "edit": { "href": "/folders/1" }
+            },
+            "id": 1,
+            "name": "Health",
+            "description": "This represents projects that are related to health",
+            "parent": 0,
+            "meta": "NULL"
+        }
+            
+### Retrieve a single Folder [GET]
+
++ Response 200
+
+    [Folder][]
+    
+### Edit a Folder [PATCH]
+
++ Request (application/json)
+
+        {
+            "description": "A collection of health related projects"
+        }
+
++ Response 200
+    
+    [Folder][]
+
+### Delete a Folder [DELETE]
+
++ Response 204
+
+## Folder Collection [/folders]
+Collections of all folders.
+
+### Attributes
++ `folder_count` ... Total count of all folders
+
+### Affordances
++ `show` (`self`) ... List of all Folders
++ `create` ... Create a new Folder
+
++ Model (application/hal+json)
+  </xmp>
+</html>

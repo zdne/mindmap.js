@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <title>mindmap.js</title>
+
+  <!-- jQuery -->
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/jquery-ui.min.js" type="text/javascript" ></script>
+
+  <!-- mindmap.js -->
+  <link href="css/mindmap.css" rel="stylesheet" type="text/css"/>
+  <script src="js/mindmap.min.js" type="text/javascript"></script>
+
+  <xmp theme="slate" style="display:none;">
+# My API
+Mind mapped API
+
+## Group A
+Lorem ipsum dolor sit amet, **consectetur adipiscing elit.**
+
+### Resource A1 [/resource/a1]
+First resource in `Group A`
+
+#### Rerieve Resource A1 [GET] 
++ Response 200
+
+        Hello World!
+
+## Group B
+This is group of resources "B"
+
+### Resource B1 [/resource/b1]
+Nothing to see here
+
+### Resource B2 [/resrouce/b2]
+This resource has a more complex structure of request and responses
+
+#### Retrieve B2 [GET]
+
++ Request 
+
+        Give me Something
+
++ Response 200
+
+    This is the successful response
+
+    + Headers
+
+            X-Meaning: 42
+
+    + Body
+
+            { ... }
+
+    + Schema
+
+            { ... }
+
+#### Remove B2 [DELETE]
++ Response 204
+
+</html>
